@@ -1,0 +1,19 @@
+{
+  "name": "jklausz",
+  "version": "1.0.0",
+  "description": "be a millionnaire too",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "beamillionairetoo"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "klausz",
+  "license": "ISC"
+}
+
