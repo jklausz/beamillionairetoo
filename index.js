@@ -1,26 +1,23 @@
 // index
 
-const stepsArr = require('./mixedFiles/steps');
+// const stepsArr = require('./steps.js');
+const questionArrEasy = require('./questionEasy');
+const steps = require('./steps');
+const questions = require('./questions');
 
-const questionArrEasy = require('./functions/questions').questionArrEasy;
-
-console.log(questionArrEasy[0].question);
-console.log(questionArrEasy[0].correct);
-console.log(questionArrEasy[0].answer1);
-console.log(questionArrEasy[0].answer2);
-console.log(questionArrEasy[0].answer3);
-console.log(questionArrEasy[0].answer4);
-console.log(questionArrEasy[0].answers);
+// console.log(questionArrEasy[0].question);
+// console.log(questionArrEasy[0].correct);
+// console.log(questionArrEasy[0].answers);
 
 // kiválasztja random az egyik objektet, majd kiírja ezt az objektet:
-let randomNumber = Math.floor(Math.random() * questionArrEasy.length);
-console.log(questionArrEasy[randomNumber])
+// let randomNumber = Math.floor(Math.random() * questionArrEasy.length);
+// console.log(questionArrEasy[randomNumber])
 
 // kiírja a random objektből a questiont:
-console.log(questionArrEasy[randomNumber].question);
+// console.log(questionArrEasy[randomNumber].question);
 
 // kiírja a helyes választ:
-console.log(questionArrEasy[randomNumber].correct);
+// console.log(questionArrEasy[randomNumber].correct);
 
 const main = () => {
 
@@ -32,9 +29,9 @@ const main = () => {
         if (key === 'q') {
             process.exit();
         }
-        if (gameInProgress === false && key.name === 's') {
-            startGame();
-        }
+        // if (gameInProgress === false && key.name === 's') {
+        //     startGame();
+        // }
         if (key === 'a') {
             console.clear();
             checkAnswer(0);
@@ -50,6 +47,12 @@ const main = () => {
         } else if (key === 'd') {
             console.clear();
             checkAnswer(3);
+        }
+        else if (key === 'o') {
+            steps.moveToNextStep()
+        }
+        else if (key === 'p') {
+            console.log(steps.getCurrentStep())
         }
     });
 
