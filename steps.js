@@ -16,35 +16,18 @@ const stepsArr = [
     '15. szint - 40000000 Ft'
 ];
 
-console.log(stepsArr);
-
-// 0. index = 5000 Ft
-
 let actualStep = 0;
 
-for (let i = 0; i < stepsArr.length; i++) {
-    if (actualQuestion.answer[answerIndex] === actualQuestion.correct) {
-        actualStep++;
-    } else {
-        console.log('Game over');
-    }
+function moveToNextStep() {
+    console.log("novel");
+    actualStep++
 }
 
-
-console.log(actualStep);
-
-// ponteredmények tömb:
-
-let scoreResult = '';
-
-// már kérdezett kérdések tömb (ne ismétlődjenek ugyanazok a kérdések):
-
-let askedQuestionsArr = [];
-
-
-
-
+function getCurrentStep() {
+    return stepsArr[actualStep]
+}
 
 module.exports = {
-    stepsArr: stepsArr
-}
+    moveToNextStep: moveToNextStep,
+    getCurrentStep: getCurrentStep
+};
