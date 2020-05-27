@@ -20,6 +20,24 @@ const questions = require('./questions');
 // console.log(questionArrEasy[randomNumber].correct);
 
 const main = () => {
+    const money = ['1. szint - 5000 Ft',
+        '2. szint - 10000 Ft',
+        '3. szint - 25000 Ft',
+        '4. szint - 50000 Ft',
+        '5. szint - 100000 Ft',
+        '6. szint - 200000 Ft',
+        '7. szint - 300000 Ft',
+        '8. szint - 500000 Ft',
+        '9. szint - 800000 Ft',
+        '10. szint - 1500000 Ft',
+        '11. szint - 3000000 Ft',
+        '12. szint - 5000000 Ft',
+        '13. szint - 10000000 Ft',
+        '14. szint - 20000000 Ft',
+        '15. szint - 40000000 Ft'
+    ]
+
+
     console.log("Press q to exit, s to start")
     const stdin = process.stdin;
     let gameInProgress = false
@@ -38,9 +56,9 @@ const main = () => {
         }
 
         if (gameInProgress) {
-
+            let currentQuestionCount = 0
+            console.log(money[currentQuestionCount])
             //     console.log(questionArrEasy[1].question)
-
 
             // console.log(JSON.stringify(questionArrEasy[1]));
 
@@ -51,9 +69,10 @@ const main = () => {
                 console.log("b " + questionArrEasy[questionIndex].answers[1].answer)
                 console.log("c " + questionArrEasy[questionIndex].answers[2].answer)
                 console.log("d " + questionArrEasy[questionIndex].answers[3].answer)
+
             }
 
-            askQuestion(questionArrEasy, 1);
+            askQuestion(questionArrEasy, currentQuestionCount);
 
 
 
@@ -78,6 +97,7 @@ const main = () => {
 
                 if (givenAnswer.correct) {
                     console.log("helyes")
+                    currentQuestionCount++
                 } else {
                     console.log("helytelen")
                 }
