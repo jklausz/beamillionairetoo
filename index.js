@@ -113,7 +113,7 @@ const main = () => {
 
                 //  console.clear()
                 //itt fogsz indexet növelni a válaszok tömbben
-		  else if (key === 'o') {
+		  if (key === 'o') {
        		     steps.moveToNextStep()
         	}
   	     	 else if (key === 'p') {
@@ -122,11 +122,5 @@ const main = () => {
     });
 
 };
-            }
-        }
-    });
-
-};
-
 
 main();
