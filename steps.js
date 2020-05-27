@@ -18,6 +18,16 @@ const stepsArr = [
 
 let actualStep = 0;
 
+function getLength() {
+    return stepsArr.length
+}
+
+//visszaadja a tomb indexedik elemet
+function getElement(index) {
+    console.log("getElement - " + stepsArr[index]);
+    return stepsArr[index]
+}
+
 function moveToNextStep() {
     console.log("novel");
     actualStep++
@@ -29,5 +39,7 @@ function getCurrentStep() {
 
 module.exports = {
     moveToNextStep: moveToNextStep,
-    getCurrentStep: getCurrentStep
+    getCurrentStep: getCurrentStep,
+    getLength: getLength,
+    getElement: getElement
 };
