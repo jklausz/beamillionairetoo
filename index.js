@@ -113,6 +113,15 @@ const main = () => {
 
                 //  console.clear()
                 //itt fogsz indexet növelni a válaszok tömbben
+		  else if (key === 'o') {
+       		     steps.moveToNextStep()
+        	}
+  	     	 else if (key === 'p') {
+           	 console.log(steps.getCurrentStep())
+        }
+    });
+
+};
             }
         }
     });
