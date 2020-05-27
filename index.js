@@ -20,6 +20,8 @@ const questions = require('./questions');
 // console.log(questionArrEasy[randomNumber].correct);
 
 const main = () => {
+
+    //meghatározza, hogy milyen hosszú a játék: money.length 
     const money = ['1. szint - 5000 Ft',
         '2. szint - 10000 Ft',
         '3. szint - 25000 Ft',
@@ -55,12 +57,17 @@ const main = () => {
             gameInProgress = true
         }
 
-        if (gameInProgress) {
-            let currentQuestionCount = 0
+        let currentQuestionCount = 0
+
+        if (gameInProgress && currentQuestionCount < money.length) {
+
+
             console.log(money[currentQuestionCount])
             //     console.log(questionArrEasy[1].question)
 
             // console.log(JSON.stringify(questionArrEasy[1]));
+
+
 
             const askQuestion = (questionArrEasy, questionIndex = 0) => {
                 //questionArrEasy[0]: az első kérdés a jsonból
@@ -73,7 +80,8 @@ const main = () => {
             }
 
             askQuestion(questionArrEasy, currentQuestionCount);
-
+            // fájlból hívva:
+            //  questions.askQuestion(questionArrEasy, currentQuestionCount);
 
 
 
@@ -100,14 +108,11 @@ const main = () => {
                     currentQuestionCount++
                 } else {
                     console.log("helytelen")
+                    gameInProgress = false;
                 }
 
                 //  console.clear()
                 //itt fogsz indexet növelni a válaszok tömbben
-            } else if (key === 'o') {
-                steps.moveToNextStep()
-            } else if (key === 'p') {
-                console.log(steps.getCurrentStep())
             }
         }
     });
