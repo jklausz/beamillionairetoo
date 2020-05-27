@@ -25,16 +25,16 @@
         ]
     },
     {
-        "question": "Hány szeme van a kalóznak?",
+        "question": "Hány füle van a majomnak?",
         "answers": [
             {
                 "mark": "a",
-                "answer": "1",
+                "answer": "2",
                 "correct": true
             },
             {
                 "mark": "b",
-                "answer": "2",
+                "answer": "1",
                 "correct": false
             },
             {
