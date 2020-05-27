@@ -119,7 +119,7 @@ const main = () => {
   	     	 else if (key === 'p') {
            	 console.log(steps.getCurrentStep())
         }
-    });
+    };
 
 };
 
