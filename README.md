@@ -1,1 +1,4 @@
 # beamillionairetoo
+
+Futtatás:
+node index 
