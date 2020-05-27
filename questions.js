@@ -1,4 +1,4 @@
-const questionsEasy = require('./questionEasy');
+const questionsEasy = require('./questionEasy.json');
 
 let actualQuestion = null;
 let askedQuestions = [];
@@ -13,14 +13,14 @@ function askQuestion() {
 }
 
 function checkAnswer(userAnswer) {
-    if(userAnswer === actualQuestion.correct) {
+    if (userAnswer === actualQuestion.correct) {
         return true
     } else {
         false
     }
 }
 
-[
+const questionArrEasy = [
     {
         "question": "Milyen színű a hó?",
         "answers": [
