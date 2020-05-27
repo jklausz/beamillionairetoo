@@ -27,8 +27,7 @@ const main = () => {
     stdin.setRawMode(true);
     stdin.resume();
     stdin.setEncoding('utf8');
-    stdin.on('data', (key)
- => {
+    stdin.on('data', (key) => {
         if (key === 'q') {
             process.exit();
         } else if (key === 's') {
