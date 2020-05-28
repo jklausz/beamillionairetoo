@@ -18,7 +18,7 @@ const stepsArr = [
 
 let actualStep = 0;
 
-function getLength() {
+let getLength = () => {
     return stepsArr.length
 }
 
