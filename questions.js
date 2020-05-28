@@ -6,11 +6,11 @@ let actualQuestion = null;
 let askedQuestions = [];
 let currentQuestionCount = 0;
 
-function getCurrentQuestionCount() {
+let getCurrentQuestionCount = () => {
     return currentQuestionCount;
 }
 
-function askQuestion(questionIndex = 0) {
+let askQuestion = (questionIndex = 0) => {
     //questionArrEasy[0]: az első kérdés a jsonból
     console.log(questionsEasy[questionIndex].question);
     console.log("a " + questionsEasy[questionIndex].answers[0].answer);
@@ -25,8 +25,7 @@ function askQuestion(questionIndex = 0) {
     //return random question
 }
 
-function checkAnswer(key)
- {
+let checkAnswer = (key) => {
     console.log("a " + key + " választ választottad")
     // kikeresi a nulladik kérdés válaszaiból
     // azt a választ, amelyiknek a betűjele megegyezik a lenyomott billentyűvel
