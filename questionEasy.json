@@ -134,11 +134,69 @@
                 "mark": "c",
                 "answer": "a mandula",
                 "correct": false,
-                "level": "easy"
+                "level": "middle"
             },
             {
                 "mark": "d",
                 "answer": "a verseny",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Mit neveztek a régi magyarok Hadak útjának?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "a honfoglalás útvonalát",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "a Tejutat",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "a Bécs felé vezető főutat",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "a nászutat",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Az alábbiak közül melyiket nevezik bricskának?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "vitorlás hajót",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "lovas kocsit",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "zsebkést",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "térdnadrágot",
                 "correct": false,
                 "level": "middle"
             }
@@ -259,5 +317,5 @@
                 "level": "hard"
             }
         ]
-    },
+    }
 ]
