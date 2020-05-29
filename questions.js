@@ -31,6 +31,8 @@ let askQuestion = (questionIndex = 0) => {
     //actualQuestion =  random question
     //return random question
     // console.log(JSON.stringify(halfAnswer(questionIndex)));
+    audienceAnswer(questionIndex);
+    telephoneAnswer(questionIndex);
 }
 
 let halfAnswer = (questionIndex) => {
@@ -43,12 +45,48 @@ let halfAnswer = (questionIndex) => {
         if (currentQuestion.answers[i].correct) {
             console.log(currentWriteAnswer);
         } else if (wrongCount === 0) {
-            console.log(currentWriteAnswer);
+            console.log(currentWriteAnswer)
             wrongCount++
         }
     }
 }
 
+let audienceAnswer = (questionIndex) => {
+    const currentQuestion = questionsEasy[questionIndex]
+
+    for (let i = 0; i < currentQuestion.answers.length; i++) {
+        const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
+        if (currentQuestion.answers[i].correct) {
+            console.log("a közönség 40%-a erre szavazott: ", currentWriteAnswer);
+        } else {
+            console.log("a közönség 20%-a erre szavazott: ", currentWriteAnswer);
+        }
+    }
+
+}
+
+let telephoneAnswer = (questionIndex) => {
+    const currentQuestion = questionsEasy[questionIndex]
+
+    let wrongAnswer;
+    let correctAnswer;
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    for (let i = 0; i < currentQuestion.answers.length; i++) {
+        const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
+        if (currentQuestion.answers[i].correct) {
+            correctAnswer = currentWriteAnswer;
+        } else {
+            wrongAnswer = currentWriteAnswer
+        }
+    }
+
+    if (randomNumber >= 1 && randomNumber <= 70) {
+        console.log("a telefonon válaszoló ezt mondta: ", correctAnswer)
+    } else {
+        console.log("a telefonon válaszoló ezt mondta: ", wrongAnswer)
+    }
+}
 let checkAnswer = (key) => {
     console.log("a " + key + " választ választottad")
     // kikeresi a nulladik kérdés válaszaiból
@@ -77,6 +115,7 @@ module.exports = {
     askQuestion: askQuestion,
     getCurrentQuestionCount: getCurrentQuestionCount,
     checkAnswer: checkAnswer,
-    halfAnswer: halfAnswer
+    halfAnswer: halfAnswer,
+    telephoneAnswer: telephoneAnswer
 };
 

@@ -49,6 +49,9 @@ const main = () => {
             } else if (key === 'f') {
                 console.log('felezés');
                 questions.halfAnswer(questions.getCurrentQuestionCount());
+            } else if (key === 't') {
+                console.log('telefon');
+                questions.telephoneAnswer(questions.getCurrentQuestionCount());
             }
         }
     }
