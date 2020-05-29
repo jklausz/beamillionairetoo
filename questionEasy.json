@@ -5,22 +5,26 @@
             {
                 "mark": "a",
                 "answer": "kek",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "b",
                 "answer": "zold",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "c",
                 "answer": "piros",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "d",
                 "answer": "fehér",
-                "correct": true
+                "correct": true,
+                "level": "easy"
             }
         ]
     },
@@ -30,22 +34,26 @@
             {
                 "mark": "a",
                 "answer": "2",
-                "correct": true
+                "correct": true,
+                "level": "easy"
             },
             {
                 "mark": "b",
                 "answer": "1",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "c",
                 "answer": "3",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "d",
                 "answer": "4",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             }
         ]
     },
@@ -55,22 +63,26 @@
             {
                 "mark": "a",
                 "answer": "2",
-                "correct": true
+                "correct": true,
+                "level": "easy"
             },
             {
                 "mark": "b",
                 "answer": "1",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "c",
                 "answer": "3",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "d",
                 "answer": "4",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             }
         ]
     },
@@ -80,23 +92,172 @@
             {
                 "mark": "a",
                 "answer": "Bukarest",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "b",
                 "answer": "Szeged",
-                "correct": false
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "c",
-                "answer": "Békéscsaba",
-                "correct": false
+                "answer": "Medgyesegyháza",
+                "correct": false,
+                "level": "easy"
             },
             {
                 "mark": "d",
                 "answer": "Budapest",
-                "correct": true
+                "correct": true,
+                "level": "easy"
             }
         ]
-    }
+    },
+    {
+        "question": "Mi indul Rideg Sándor regényének címében?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "a banzáj",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "a bakterház",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "a mandula",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "d",
+                "answer": "a verseny",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Miket választ el egymástól a Kármán-vonal?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "a légi teret és a világűrt",
+                "correct": true,
+                "level": "hard"
+            },
+            {
+                "mark": "b",
+                "answer": "a sztratoszférát és a bioszférát",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "c",
+                "answer": "a kontinenseket és a tengereket",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "d",
+                "answer": "a földköpenyt és a földkérget",
+                "correct": false,
+                "level": "hard"
+            }
+        ]
+    },
+    {
+        "question": "Melyik színdarab játszódik a harmincéves háború alatt?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Az orleans-i szűz",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "b",
+                "answer": "Az obsitos",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "c",
+                "answer": "Kurázsi mama",
+                "correct": true,
+                "level": "hard"
+            },
+            {
+                "mark": "d",
+                "answer": "Fáklyaláng",
+                "correct": false,
+                "level": "hard"
+            }
+        ]
+    },
+    {
+        "question": "Melyik országgal nem határos Luxemburg?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Belgium",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "b",
+                "answer": "Svájc",
+                "correct": true,
+                "level": "hard"
+            },
+            {
+                "mark": "c",
+                "answer": "Franciaország",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "d",
+                "answer": "Németország",
+                "correct": false,
+                "level": "hard"
+            }
+        ]
+    },
+    {
+        "question": "Kinek a képe látható a magyar kártya zöld alsóján?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Rudenz Ulrich",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "b",
+                "answer": "Reding Itell",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "c",
+                "answer": "Fürst Walter",
+                "correct": true,
+                "level": "hard"
+            },
+            {
+                "mark": "d",
+                "answer": "Harras Rudolf",
+                "correct": false,
+                "level": "hard"
+            }
+        ]
+    },
 ]
