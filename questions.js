@@ -30,6 +30,23 @@ let askQuestion = (questionIndex = 0) => {
     //hozzadni a kerdes indexet askedQuestions
     //actualQuestion =  random question
     //return random question
+    // console.log(JSON.stringify(halfAnswer(questionIndex)));
+}
+
+let halfAnswer = (questionIndex) => {
+    //let halfOftheAnswers = [];
+    let wrongCount = 0
+    const currentQuestion = questionsEasy[currentQuestionCount]
+
+    for (let i = 0; i < currentQuestion.answers.length; i++) {
+        const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
+        if (currentQuestion.answers[i].correct) {
+            console.log(currentWriteAnswer);
+        } else if (wrongCount === 0) {
+            console.log(currentWriteAnswer);
+            wrongCount++
+        }
+    }
 }
 
 let checkAnswer = (key) => {
@@ -59,6 +76,7 @@ let checkAnswer = (key) => {
 module.exports = {
     askQuestion: askQuestion,
     getCurrentQuestionCount: getCurrentQuestionCount,
-    checkAnswer: checkAnswer
+    checkAnswer: checkAnswer,
+    halfAnswer: halfAnswer
 };
 
