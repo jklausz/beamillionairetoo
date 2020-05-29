@@ -4,7 +4,8 @@
   "description": "be a millionnaire too",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,8 @@
     "test"
   ],
   "author": "klausz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

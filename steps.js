@@ -1,22 +1,24 @@
 const stepsArr = [
-    '1. szint - 5000 Ft',
-    '2. szint - 10000 Ft',
-    '3. szint - 25000 Ft',
-    '4. szint - 50000 Ft',
-    '5. szint - 100000 Ft',
-    '6. szint - 200000 Ft',
-    '7. szint - 300000 Ft',
-    '8. szint - 500000 Ft',
-    '9. szint - 800000 Ft',
-    '10. szint - 1500000 Ft',
-    '11. szint - 3000000 Ft',
-    '12. szint - 5000000 Ft',
-    '13. szint - 10000000 Ft',
-    '14. szint - 20000000 Ft',
-    '15. szint - 40000000 Ft'
+    {
+        'levelName': '1. szint - 5000 Ft', 'canStop': false
+    },
+    { 'levelName': '2. szint - 10000 Ft', 'canStop': false },
+    { 'levelName': '3. szint - 25000 Ft', 'canStop': false },
+    { 'levelName': '4. szint - 50000 Ft', 'canStop': false },
+    { 'levelName': '5. szint - 100000 Ft', 'canStop': true },
+    { 'levelName': '6. szint - 200000 Ft', 'canStop': false },
+    { 'levelName': '7. szint - 300000 Ft', 'canStop': false },
+    { 'levelName': '8. szint - 500000 Ft', 'canStop': false },
+    { 'levelName': '9. szint - 800000 Ft', 'canStop': false },
+    { 'levelName': '10. szint - 1500000 Ft', 'canStop': true },
+    { 'levelName': '11. szint - 3000000 Ft', 'canStop': false },
+    { 'levelName': '12. szint - 5000000 Ft', 'canStop': false },
+    { 'levelName': '13. szint - 10000000 Ft', 'canStop': false },
+    { 'levelName': '14. szint - 20000000 Ft', 'canStop': false },
+    { 'levelName': '15. szint - 40000000 Ft', 'canStop': false }
+
 ];
 
-let actualStep = 0;
 
 let getLength = () => {
     return stepsArr.length
@@ -24,22 +26,10 @@ let getLength = () => {
 
 //visszaadja a tomb indexedik elemet
 let getElement = (index) => {
-    console.log("getElement - " + stepsArr[index]);
-    return stepsArr[index]
-}
-
-let moveToNextStep = () => {
-    console.log("novel");
-    actualStep++
-}
-
-let getCurrentStep = () => {
-    return stepsArr[actualStep]
+    console.log(stepsArr[index].levelName);
 }
 
 module.exports = {
-    moveToNextStep: moveToNextStep,
-    getCurrentStep: getCurrentStep,
     getLength: getLength,
     getElement: getElement
 };

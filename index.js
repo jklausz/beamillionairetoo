@@ -1,13 +1,7 @@
 // index
 
-// const stepsArr = require('./steps.js');
-const questionArrEasy = require('./questionEasy.json');
-const steps = require('./steps');
 const questions = require('./questions');
-
-// console.log(questionArrEasy[0].question);
-// console.log(questionArrEasy[0].correct);
-// console.log(questionArrEasy[0].answers);
+const reader = require("readline-sync");
 
 // kiválasztja random az egyik objektet, majd kiírja ezt az objektet:
 // let randomNumber = Math.floor(Math.random() * questionArrEasy.length);
@@ -20,51 +14,30 @@ const questions = require('./questions');
 // console.log(questionArrEasy[randomNumber].correct);
 
 const main = () => {
+    const MAX_QUESTION_COUNT = 30
+    // console.log("Press q to exit, s to start")
 
-    console.log("Press q to exit, s to start")
-    const stdin = process.stdin;
-    let gameInProgress = false
-    stdin.setRawMode(true);
-    stdin.resume();
-    stdin.setEncoding('utf8');
-    stdin.on('data', (key) => {
-        if (key === 'q') {
-            process.exit();
-        } else if (key === 's') {
-            //startGame();
-            console.log("start game");
-            gameInProgress = true
-        }
+    let key = reader.keyIn("Press q to exit, s to start: ");
+    if (key === 'q') {
+        process.exit();
+    } else if (key === 's') {
+        //startGame();
+        console.log("start game");
+        gameInProgress = true;
 
-        if (gameInProgress && questions.getCurrentQuestionCount() < steps.getLength()) {
+        questions.askQuestion(questions.getCurrentQuestionCount());
 
-
-            //     console.log(questionArrEasy[1].question)
-
-            // console.log(JSON.stringify(questionArrEasy[1]));
-
-            questions.askQuestion(questions.getCurrentQuestionCount());
-            // fájlból hívva:
-            //  questions.askQuestion(questionArrEasy, currentQuestionCount);
-
-
+        for (let i = questions.getCurrentQuestionCount(); i <= MAX_QUESTION_COUNT; i++) {
+            key = reader.keyIn('Nyomd meg az egyik gombot a következők közül: a, b, c és d:   ');
+            console.log('Vagy nyomd meg a q betűt a kilépéshez');
             //itt válaszolt kérdésre
             if (key === 'a' || key === 'b' || key === 'c' || key === 'd') {
-
-
-                questions.checkAnswer(key)
-;
-
-                //  console.clear()
-                //itt fogsz indexet növelni a válaszok tömbben
-                if (key === 'o') {
-                    steps.moveToNextStep()
-                } else if (key === 'p') {
-                    console.log(steps.getCurrentStep())
-                }
+                questions.checkAnswer(key);
+            } else if (key === 'q') {
+                process.exit();
             }
         }
-    })
+    }
 }
 
-main()
+main();
