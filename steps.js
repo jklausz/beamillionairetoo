@@ -23,17 +23,17 @@ let getLength = () => {
 }
 
 //visszaadja a tomb indexedik elemet
-function getElement(index) {
+let getElement = (index) => {
     console.log("getElement - " + stepsArr[index]);
     return stepsArr[index]
 }
 
-function moveToNextStep() {
+let moveToNextStep = () => {
     console.log("novel");
     actualStep++
 }
 
-function getCurrentStep() {
+let getCurrentStep = () => {
     return stepsArr[actualStep]
 }
 
