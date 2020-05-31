@@ -57,7 +57,7 @@ let halfAnswer = (questionIndex) => {
         }
         helpers[2].used = true;
     } else {
-        console.log("Felezo man hasznalva");
+        console.log("Felező már használva");
     }
 }
 
