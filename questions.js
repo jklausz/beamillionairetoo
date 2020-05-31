@@ -97,8 +97,7 @@ let telephoneAnswer = (questionIndex) => {
         console.log("a telefonon válaszoló ezt mondta: ", wrongAnswer)
     }
 }
-let checkAnswer = (key)
-    => {
+let checkAnswer = (key) => {
     console.log("a " + key + " választ választottad")
     // kikeresi a nulladik kérdés válaszaiból
     // azt a választ, amelyiknek a betűjele megegyezik a lenyomott billentyűvel
