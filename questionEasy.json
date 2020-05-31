@@ -116,6 +116,35 @@
         ]
     },
     {
+        "question": "Hol sütik már a rántott békát?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Kovácséknál",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "b",
+                "answer": "Vargáéknál",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "c",
+                "answer": "Virágéknál",
+                "correct": true,
+                "level": "easy"
+            },
+            {
+                "mark": "d",
+                "answer": "Budapest",
+                "correct": false,
+                "level": "easy"
+            }
+        ]
+    },
+    {
         "question": "Mi indul Rideg Sándor regényének címében?",
         "answers": [
             {
@@ -203,6 +232,64 @@
         ]
     },
     {
+        "question": "Milyen állat a Fekete István történetéből ismert Lutra?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "hód",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "vidra",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "cickány",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "tengerimalac",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Hol volt Minótaurosz híres labirintusa?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Máltán",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "Cipruson",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "Krétán",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "Korzikán",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
         "question": "Miket választ el egymástól a Kármán-vonal?",
         "answers": [
             {
@@ -284,6 +371,64 @@
             {
                 "mark": "d",
                 "answer": "Németország",
+                "correct": false,
+                "level": "hard"
+            }
+        ]
+    },
+    {
+        "question": "Melyik Walt Disney-rajzfilmhez komponált dalokat Elton John?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Pocahontas",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "b",
+                "answer": "Oroszlánkirály",
+                "correct": true,
+                "level": "hard"
+            },
+            {
+                "mark": "c",
+                "answer": "Herkules",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "d",
+                "answer": "Aladdin",
+                "correct": false,
+                "level": "hard"
+            }
+        ]
+    },
+    {
+        "question": "Melyik íz érzékelhető a nyelv hátsó részén (a nyelvgyökön)?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "keserű",
+                "correct": true,
+                "level": "hard"
+            },
+            {
+                "mark": "b",
+                "answer": "édes",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "c",
+                "answer": "savanyú",
+                "correct": false,
+                "level": "hard"
+            },
+            {
+                "mark": "d",
+                "answer": "sós",
                 "correct": false,
                 "level": "hard"
             }
