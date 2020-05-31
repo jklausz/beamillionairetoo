@@ -169,6 +169,13 @@ const shuffleArr = (array) => {
   return array;
 };
 
+// 1 jsonbe mindent bele
+// 3 tömbbe szétszedni
+// ShuffleArr fogad egy tömböt bemeneti argumentumként
+// oda beírni, amit keverni akarok
+// deklarálni egy változót, ami a kevert tömb lesz majd
+// úgy inicializálni, hogy egyenlővé tenni vele a ShuffleArr fgv-t a kívánt bemeneti értékkel
+// így a berakott tömb összekevert változata lesz a deklarált kevert tömb változó
 
 */
 let checkAnswer = (key) => {
@@ -195,11 +202,28 @@ let checkAnswer = (key) => {
     }
 }
 
+const shuffleArr = (questionEasy[0]) => {
+    let currentIndex = questionEasy[0].length;
+    let temporaryValue;
+    let randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = questionEasy[0][currentIndex];
+        questionEasy[0][currentIndex] = questionEasy[0][randomIndex];
+        questionEasy[0][randomIndex] = temporaryValue;
+    }
+
+    return questionEasy[0];
+};
+
 module.exports = {
     askQuestion: askQuestion,
     getCurrentQuestionCount: getCurrentQuestionCount,
     checkAnswer: checkAnswer,
     halfAnswer: halfAnswer,
     telephoneAnswer: telephoneAnswer,
-    audienceAnswer: audienceAnswer
+    audienceAnswer: audienceAnswer,
+    shuffleArr: shuffleArr
 };
