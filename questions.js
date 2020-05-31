@@ -5,7 +5,11 @@ const steps = require('./steps');
 //TODO: ha kérdés sorrendet variálnék, itt kell questionsEasy-t shuffle
 const questionsEasy = questionsEasyOrig
 
-
+const helpers = [
+    { "name": "Telefon", "used": false },
+    { "name": "Kozonseg", "used": false },
+    { "name": "Felezo", "used": false }
+];
 
 let actualQuestion = null;
 let askedQuestions = [];
@@ -30,24 +34,30 @@ let askQuestion = (questionIndex = 0) => {
     //hozzadni a kerdes indexet askedQuestions
     //actualQuestion =  random question
     //return random question
-    // console.log(JSON.stringify(halfAnswer(questionIndex)));
-    audienceAnswer(questionIndex);
-    telephoneAnswer(questionIndex);
+    // console.log(JSON.stringiqfy(halfAnswer(questionIndex)));
+    // audienceAnswer(questionIndex);
+    // telephoneAnswer(questionIndex);
 }
 
 let halfAnswer = (questionIndex) => {
     //let halfOftheAnswers = [];
-    let wrongCount = 0
-    const currentQuestion = questionsEasy[currentQuestionCount]
 
-    for (let i = 0; i < currentQuestion.answers.length; i++) {
-        const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
-        if (currentQuestion.answers[i].correct) {
-            console.log(currentWriteAnswer);
-        } else if (wrongCount === 0) {
-            console.log(currentWriteAnswer)
-            wrongCount++
+    if (!helpers[2].used) {
+        let wrongCount = 0;
+        const currentQuestion = questionsEasy[currentQuestionCount]
+
+        for (let i = 0; i < currentQuestion.answers.length; i++) {
+            const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
+            if (currentQuestion.answers[i].correct) {
+                console.log(currentWriteAnswer);
+            } else if (wrongCount === 0) {
+                console.log(currentWriteAnswer)
+                wrongCount++
+            }
         }
+        helpers[2].used = true;
+    } else {
+        console.log("Felezo man hasznalva");
     }
 }
 
@@ -87,7 +97,8 @@ let telephoneAnswer = (questionIndex) => {
         console.log("a telefonon válaszoló ezt mondta: ", wrongAnswer)
     }
 }
-let checkAnswer = (key) => {
+let checkAnswer = (key)
+    => {
     console.log("a " + key + " választ választottad")
     // kikeresi a nulladik kérdés válaszaiból
     // azt a választ, amelyiknek a betűjele megegyezik a lenyomott billentyűvel
@@ -116,6 +127,6 @@ module.exports = {
     getCurrentQuestionCount: getCurrentQuestionCount,
     checkAnswer: checkAnswer,
     halfAnswer: halfAnswer,
-    telephoneAnswer: telephoneAnswer
+    telephoneAnswer: telephoneAnswer,
+    audienceAnswer: audienceAnswer
 };
-
