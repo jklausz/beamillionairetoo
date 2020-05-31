@@ -28,6 +28,7 @@ const main = () => {
         //startGame();
         console.log("start game");
 
+        const shuffleArr = questions.shuffleArr(questonEasy.questionEasy[0]);
 
         //console.log(JSON.stringify(halfAnswer(questionIndex)));
 
