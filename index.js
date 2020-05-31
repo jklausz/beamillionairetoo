@@ -52,6 +52,9 @@ const main = () => {
             } else if (key === 't') {
                 console.log('telefon');
                 questions.telephoneAnswer(questions.getCurrentQuestionCount());
+            } else if (key === 'k') {
+                console.log('közönség');
+                questions.audienceAnswer(questions.getCurrentQuestionCount());
             }
         }
     }
