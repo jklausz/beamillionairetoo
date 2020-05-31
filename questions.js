@@ -60,7 +60,6 @@ let halfAnswer = (questionIndex) => {
         console.log("Felező már használva");
     }
 }
-
 let audienceAnswer = (questionIndex) => {
     const currentQuestion = questionsEasy[questionIndex]
 
@@ -97,6 +96,81 @@ let telephoneAnswer = (questionIndex) => {
         console.log("a telefonon válaszoló ezt mondta: ", wrongAnswer)
     }
 }
+
+/*let audienceAnswer = (questionIndex) => {
+    //let audienceAns = [];
+
+    if (!helpers[1].used) {
+        let wrongCount = 0;
+        const currentQuestion = questionsEasy[questionIndex]
+
+        for (let i = 0; i < currentQuestion.answers.length; i++) {
+            const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
+            if (currentQuestion.answers[i].correct) {
+                console.log("a közönség 40%-a erre szavazott: ", currentWriteAnswer);
+            } else if {
+                console.log("a közönség 20%-a erre szavazott: ", currentWriteAnswer);
+            } else if (wrongCount === 0) {
+                console.log(currentWriteAnswer)
+                wrongCount++
+            }
+        }
+        helpers[1].used = true;
+    } else {
+        console.log("A közönség már használva");
+    }
+}
+
+let telephoneAnswer = (questionIndex) => {
+    const currentQuestion = questionsEasy[questionIndex]
+
+    let wrongAnswer;
+    let correctAnswer;
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    for (let i = 0; i < currentQuestion.answers.length; i++) {
+        const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
+        if (currentQuestion.answers[i].correct) {
+            correctAnswer = currentWriteAnswer;
+        } else {
+            wrongAnswer = currentWriteAnswer
+        }
+    }
+
+    if (randomNumber >= 1 && randomNumber <= 70) {
+        console.log("a telefonon válaszoló ezt mondta: ", correctAnswer)
+    } else {
+        console.log("a telefonon válaszoló ezt mondta: ", wrongAnswer)
+        /*  } else if (wrongCount === 0) {
+              console.log(currentWriteAnswer)
+              wrongCount++
+          }
+      }
+      helpers[0].used = true;
+      } else {
+          console.log("Telefon már használva");
+    }
+} */
+
+/*
+const shuffleArr = (array) => {
+  let currentIndex = array.length;
+  let temporaryValue;
+  let randomIndex;
+
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+};
+
+
+*/
 let checkAnswer = (key) => {
     console.log("a " + key + " választ választottad")
     // kikeresi a nulladik kérdés válaszaiból
