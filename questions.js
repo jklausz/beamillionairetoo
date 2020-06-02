@@ -1,5 +1,6 @@
 // question.js
-
+const Table = require('cli-table');
+const chalk = require('chalk');
 const questionsEasyOrig = require('./questionEasy.json');
 const questionsMiddleOrig = require('./questionMiddle.json');
 const questionsHardOrig = require('./questionHard.json');
@@ -52,10 +53,21 @@ let askQuestion = (questionIndex = 0) => {
 
     //questionArrEasy[0]: az első kérdés a jsonból
     console.log(allQuestionsShuffled[questionIndex].question);
-    console.log("a " + allQuestionsShuffled[questionIndex].answers[0].answer);
-    console.log("b " + allQuestionsShuffled[questionIndex].answers[1].answer);
-    console.log("c " + allQuestionsShuffled[questionIndex].answers[2].answer);
-    console.log("d " + allQuestionsShuffled[questionIndex].answers[3].answer);
+
+
+    // instantiate
+    var table = new Table({
+
+        colWidths: [50, 50]
+    });
+
+    // table is an Array, so you can `push`, `unshift`, `splice` and friends
+    table.push(
+        ["a " + allQuestionsShuffled[questionIndex].answers[0].answer, "b " + allQuestionsShuffled[questionIndex].answers[1].answer]
+        , ["c " + allQuestionsShuffled[questionIndex].answers[2].answer, "d " + allQuestionsShuffled[questionIndex].answers[3].answer]
+    );
+
+    console.log(table.toString());
     //benne van-e mar a kerdes az askedQuestions-be?
     //nem -> akkor kerdezzuk es rakjuk bele
     //igen -> akkor kerdezzunk masikat
@@ -147,7 +159,7 @@ let checkAnswer = (key) => {
     //helyes válasz?
 
     if (givenAnswer.correct) {
-        console.log("helyes");
+        console.log(chalk.bgGreen("helyes"));
 
         if (steps.stepsArr.length > currentQuestionCount + 1) {
             currentQuestionCount++;

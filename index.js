@@ -1,5 +1,6 @@
 // index
-
+const Table = require('cli-table');
+const chalk = require('chalk');
 //importálja a question.js-t és a readline-sync-et:
 const questions = require('./questions');
 const reader = require("readline-sync");
