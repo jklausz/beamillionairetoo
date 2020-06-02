@@ -16,7 +16,7 @@ const steps = require('./steps');
 // console.log(questionArrEasy[randomNumber].correct);
 
 const main = () => {
-    console.log('Legyen Ön is milliomos!')
+    console.log(chalk.bgBlue('Legyen Ön is milliomos!'));
     const MAX_QUESTION_COUNT = steps.getLength();
     // console.log("Press q to exit, s to start")
 
@@ -98,7 +98,7 @@ const main = () => {
                 }
             }
             if (i === MAX_QUESTION_COUNT) {
-                console.log('Gratulálunk,  Ön megnyerte a 40 millió Ft-ot!');
+                console.log(chalk.bgGreen('Gratulálunk, Ön megnyerte a 40 millió Ft-ot!'));
             }
         }
     }

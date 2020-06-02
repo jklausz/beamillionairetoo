@@ -256,7 +256,7 @@ let checkAnswer = (key) => {
     }
     //helyes válasz?
 
-    let yesNo = reader.keyIn("Biztos? ");
+    let yesNo = reader.keyIn("Vágó István: Biztos? ");
     if (yesNo === 'y') {
         askQuestion(getCurrentQuestionCount(), key, correctAnswer.mark)
         if (givenAnswer.correct) {
