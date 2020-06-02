@@ -98,17 +98,39 @@ let halfAnswer = (questionIndex) => {
 }
 
 let audienceAnswer = (questionIndex) => {
+    let correctArray = [];
+    let wrongArray = [];
     const currentQuestion = allQuestionsShuffled[questionIndex]
-
+    console.log(currentQuestion.question);
     for (let i = 0; i < currentQuestion.answers.length; i++) {
         const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
         if (currentQuestion.answers[i].correct) {
-            console.log("a közönség 40%-a erre szavazott: ", currentWriteAnswer);
+            correctArray.push(currentWriteAnswer)
         } else {
-            console.log("a közönség 20%-a erre szavazott: ", currentWriteAnswer);
+            wrongArray.push(currentWriteAnswer)
         }
     }
 
+
+
+    // instantiate
+    var table = new Table({
+
+        colWidths: [40, 40, 20]
+    });
+
+    // table is an Array, so you can `push`, `unshift`, `splice` and friends
+    table.push(
+        [correctArray[0], "||||||||||", "40%"],
+
+        [wrongArray[0], "|||||", "20%"],
+
+        [wrongArray[1], "|||||", "20%"],
+
+        [wrongArray[2], "|||||", "20%"]
+    );
+
+    console.log(table.toString());
 }
 
 let telephoneAnswer = (questionIndex) => {
