@@ -54,6 +54,11 @@ const main = () => {
                 i++;
             } else if (key === 'q') {
                 process.exit();
+            } else if (key === 'l') {
+                console.log('Szintek');
+                steps.showLevel(questions.getCurrentQuestionCount());
+
+
             } else if (key === 'f') {
                 console.log('felezés');
                 if (halfUsed === false) {

@@ -21,35 +21,58 @@ const stepsArr = [
     { 'levelName': '15. szint - 40000000 Ft', 'canStop': false }
 
 ];
-let table = new Table({
 
-    colWidths: [40]
-});
+const showLevel = (index) => {
 
-// table is an Array, so you can `push`, `unshift`, `splice` and friends
-for (let i = 0; i < 5; i++) {
-    table.push(
-        [chalk.bgBlue(stepsArr[i].levelName)],
-    );
+
+
+    let table = new Table({
+
+        colWidths: [40]
+    });
+
+    // table is an Array, so you can `push`, `unshift`, `splice` and friends
+    for (let i = 0; i < 5; i++) {
+        if (index === i) {
+            table.push(
+                [chalk.bgYellow(stepsArr[i].levelName)],
+            );
+        } else {
+            table.push(
+                [chalk.bgBlue(stepsArr[i].levelName)],
+            );
+        }
+    }
+
+    for (let i = 5; i < 10; i++) {
+        if (index === i) {
+            table.push(
+                [chalk.bgYellow(stepsArr[i].levelName)],
+            );
+        } else {
+            table.push(
+                [chalk.bgRed(stepsArr[i].levelName)],
+            );
+        }
+    }
+
+    for (let i = 10; i < 15; i++) {
+        if (index === i) {
+            table.push(
+                [chalk.bgYellow(stepsArr[i].levelName)],
+            );
+        } else {
+            table.push(
+                [chalk.bgGreen(stepsArr[i].levelName)],
+            );
+        }
+    }
+
+
+
+    console.log(table.toString());
+
 }
-
-for (let i = 5; i < 10; i++) {
-    table.push(
-        [chalk.bgRed(stepsArr[i].levelName)],
-    );
-}
-
-for (let i = 10; i < 15; i++) {
-    table.push(
-        [chalk.bgGreen(stepsArr[i].levelName)],
-    );
-}
-
-
-
-console.log(table.toString());
-
-
 
 
 let getLength = () => {
@@ -64,5 +87,6 @@ let getElement = (index) => {
 module.exports = {
     getLength: getLength,
     getElement: getElement,
-    stepsArr: stepsArr
+    stepsArr: stepsArr,
+    showLevel: showLevel
 };
