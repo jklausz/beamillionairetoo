@@ -18,6 +18,9 @@ const main = () => {
     const MAX_QUESTION_COUNT = steps.getLength();
     // console.log("Press q to exit, s to start")
 
+    let audienceAsked = false;
+    let phoneUsed = false;
+    let halfUsed = false;
     // kiírja a usernek, hogy nyomja meg a kilépéshez a q-t vagy s-t az indításhoz: 
     let key = reader.keyIn("Press q to exit, s to start: ");
     // a user ha a q betűt megnyomja, kilépteti a játékból:
@@ -28,7 +31,6 @@ const main = () => {
         //startGame();
         console.log("start game");
 
-        const shuffleArr = questions.shuffleArr(questonEasy.questionEasy[0]);
 
         //console.log(JSON.stringify(halfAnswer(questionIndex)));
 
@@ -47,15 +49,18 @@ const main = () => {
                 questions.checkAnswer(key);
             } else if (key === 'q') {
                 process.exit();
-            } else if (key === 'f') {
+            } else if (key === 'f' && halfUsed === false) {
                 console.log('felezés');
                 questions.halfAnswer(questions.getCurrentQuestionCount());
-            } else if (key === 't') {
+                halfUsed = true;
+            } else if (key === 't' && phoneUsed === false) {
                 console.log('telefon');
                 questions.telephoneAnswer(questions.getCurrentQuestionCount());
-            } else if (key === 'k') {
+                phoneUsed = true;
+            } else if (key === 'k' && audienceAsked === false) {
                 console.log('közönség');
                 questions.audienceAnswer(questions.getCurrentQuestionCount());
+                audienceAsked = true;
             }
         }
     }
