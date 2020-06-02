@@ -49,6 +49,7 @@ let getCurrentQuestionCount = () => {
 }
 
 let askQuestion = (questionIndex = 0) => {
+    console.clear();
     steps.getElement(questionIndex);
 
     //questionArrEasy[0]: az első kérdés a jsonból
@@ -166,7 +167,7 @@ let checkAnswer = (key) => {
             askQuestion(currentQuestionCount);
         }
     } else {
-        console.log("A válasz helytelen volt, véget ért a játék");
+        console.log(chalk.bgRed("A válasz helytelen volt, véget ért a játék"));
         process.exit();
     }
 }
