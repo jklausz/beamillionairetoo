@@ -35,7 +35,7 @@ const showLevel = (index) => {
     for (let i = 0; i < 5; i++) {
         if (index === i) {
             table.push(
-                [chalk.bgYellow(stepsArr[i].levelName)],
+                [chalk.bgMagenta(stepsArr[i].levelName)],
             );
         } else {
             table.push(
@@ -47,7 +47,7 @@ const showLevel = (index) => {
     for (let i = 5; i < 10; i++) {
         if (index === i) {
             table.push(
-                [chalk.bgYellow(stepsArr[i].levelName)],
+                [chalk.bgMagenta(stepsArr[i].levelName)],
             );
         } else {
             table.push(
@@ -59,7 +59,7 @@ const showLevel = (index) => {
     for (let i = 10; i < 15; i++) {
         if (index === i) {
             table.push(
-                [chalk.bgYellow(stepsArr[i].levelName)],
+                [chalk.bgMagenta(stepsArr[i].levelName)],
             );
         } else {
             table.push(
