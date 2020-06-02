@@ -49,7 +49,7 @@ let getCurrentQuestionCount = () => {
 }
 
 let askQuestion = (questionIndex = 0, key, correct = null) => {
-    console.clear();
+    //console.clear();
     steps.getElement(questionIndex);
 
     //questionArrEasy[0]: az első kérdés a jsonból
@@ -65,44 +65,45 @@ let askQuestion = (questionIndex = 0, key, correct = null) => {
     const aText = "a " + allQuestionsShuffled[questionIndex].answers[0].answer
     let markedKeyA = aText
 
-    if (key === 'a') {
-        markedKeyA = chalk.bgBlue(aText)
-    }
 
 
     const bText = "b " + allQuestionsShuffled[questionIndex].answers[1].answer
     let markedKeyB = bText
 
-    if (key === 'b') {
-        markedKeyB = chalk.bgBlue(bText)
-    }
+
 
     const cText = "c " + allQuestionsShuffled[questionIndex].answers[2].answer
     let markedKeyC = cText
 
-    if (key === 'c') {
-        markedKeyC = chalk.bgBlue(cText)
-    }
+
     const dText = "d " + allQuestionsShuffled[questionIndex].answers[3].answer
     let markedKeyD = dText
 
-    if (key === 'd') {
-        markedKeyD = chalk.bgBlue(dText)
+
+
+
+    if (correct === 'a') {
+        markedKeyA = chalk.bgGreen(markedKeyA)
+    } else if (key === 'a') {
+        markedKeyA = chalk.bgBlue(aText)
     }
 
-    if (correct) {
-        if (correct === 'a') {
-            markedKeyA = chalk.bgGreen(markedKeyA)
-        }
-        if (correct === 'b') {
-            markedKeyB = chalk.bgGreen(markedKeyB)
-        }
-        if (correct === 'c') {
-            markedKeyC = chalk.bgGreen(markedKeyC)
-        }
-        if (correct === 'd') {
-            markedKeyD = chalk.bgGreen(markedKeyD)
-        }
+
+    if (correct === 'b') {
+        markedKeyB = chalk.bgGreen(markedKeyB)
+    } else if (key === 'b') {
+        markedKeyB = chalk.bgBlue(bText)
+    }
+    if (correct === 'c') {
+        markedKeyC = chalk.bgGreen(markedKeyC)
+    } else if (key === 'c') {
+        markedKeyC = chalk.bgBlue(cText)
+    }
+
+    if (correct === 'd') {
+        markedKeyD = chalk.bgGreen(markedKeyD)
+    } else if (key === 'd') {
+        markedKeyD = chalk.bgBlue(dText)
     }
 
     // table is an Array, so you can `push`, `unshift`, `splice` and friends
@@ -141,6 +142,7 @@ let halfAnswer = (questionIndex) => {
         } else {
             halfOftheAnswers.push(" ");
         }
+
     }
 
     var table = new Table({

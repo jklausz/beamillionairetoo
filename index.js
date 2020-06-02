@@ -43,6 +43,17 @@ const main = () => {
         let i = questions.getCurrentQuestionCount()
         while (i <= MAX_QUESTION_COUNT) {
 
+            if (halfUsed === false) {
+                console.log('Használhatod a felezést - nyomd meg az f betűt');
+            }
+            if (phoneUsed === false) {
+                console.log('Használhatod a telefont - nyomd meg az t betűt');
+            }
+            if (audienceAsked === false) {
+                console.log('Használhatod a közönség segítségét - nyomd meg a k betűt');
+            }
+
+
             if (i < MAX_QUESTION_COUNT) {
                 key = reader.keyIn('Nyomd meg az egyik gombot a következők közül: a, b, c és d:   ');
                 console.log('Vagy nyomd meg a q betűt a kilépéshez');
