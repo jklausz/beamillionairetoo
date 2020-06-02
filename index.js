@@ -38,7 +38,8 @@ const main = () => {
         questions.askQuestion(questions.getCurrentQuestionCount());
 
         // megkéri a usert, hogy a feltett kérdésre adjon egy választ az a, b, c, d gombok közül valamenyik lenyomásával, vagy a q betűvel ki tud lépni
-        for (let i = questions.getCurrentQuestionCount(); i <= MAX_QUESTION_COUNT; i++) {
+        let i = questions.getCurrentQuestionCount()
+        while (i <= MAX_QUESTION_COUNT) {
 
             if (i < MAX_QUESTION_COUNT) {
                 key = reader.keyIn('Nyomd meg az egyik gombot a következők közül: a, b, c és d:   ');
@@ -48,6 +49,7 @@ const main = () => {
             //itt válaszolt kérdésre
             if (key === 'a' || key === 'b' || key === 'c' || key === 'd') {
                 questions.checkAnswer(key);
+                i++;
             } else if (key === 'q') {
                 process.exit();
             } else if (key === 'f') {
@@ -56,22 +58,30 @@ const main = () => {
                     questions.halfAnswer(questions.getCurrentQuestionCount());
                     halfUsed = true;
                 } else {
-                    console.log('A felezést már elhasználta')
+                    console.log('A felezést már elhasználta');
                 }
-            } else if (key === 't' && phoneUsed === false) {
+            } else if (key === 't') {
                 console.log('telefon');
-                questions.telephoneAnswer(questions.getCurrentQuestionCount());
-                phoneUsed = true;
-            } else if (key === 'k' && audienceAsked === false) {
+                if (phoneUsed === false) {
+                    questions.telephoneAnswer(questions.getCurrentQuestionCount());
+                    phoneUsed = true;
+                } else {
+                    console.log('A telefont már elhasználta');
+                }
+
+            } else if (key === 'k') {
                 console.log('közönség');
-                questions.audienceAnswer(questions.getCurrentQuestionCount());
-                audienceAsked = true;
+                if (audienceAsked === false) {
+                    questions.audienceAnswer(questions.getCurrentQuestionCount());
+                    audienceAsked = true;
+                } else {
+                    console.log('A közönség segítségét már elhasználta');
+                }
             }
             if (i === MAX_QUESTION_COUNT) {
-                console.log('Gratulálunk,  Ön megnyerte a 40 millió Ft-ot!')
+                console.log('Gratulálunk,  Ön megnyerte a 40 millió Ft-ot!');
             }
         }
     }
 }
-
 main();
