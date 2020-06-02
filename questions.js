@@ -5,7 +5,7 @@ const questionsEasyOrig = require('./questionEasy.json');
 const questionsMiddleOrig = require('./questionMiddle.json');
 const questionsHardOrig = require('./questionHard.json');
 const steps = require('./steps');
-
+const reader = require("readline-sync");
 
 const shuffleArr = (array) => {
     let currentIndex = array.length;
@@ -48,7 +48,7 @@ let getCurrentQuestionCount = () => {
     return currentQuestionCount;
 }
 
-let askQuestion = (questionIndex = 0) => {
+let askQuestion = (questionIndex = 0, key) => {
     console.clear();
     steps.getElement(questionIndex);
 
@@ -62,10 +62,38 @@ let askQuestion = (questionIndex = 0) => {
         colWidths: [50, 50]
     });
 
+    const aText = "a " + allQuestionsShuffled[questionIndex].answers[0].answer
+    let markedKeyA = aText
+
+    if (key === 'a') {
+        markedKeyA = chalk.bgBlue(aText)
+    }
+
+
+    const bText = "b " + allQuestionsShuffled[questionIndex].answers[1].answer
+    let markedKeyB = bText
+
+    if (key === 'b') {
+        markedKeyB = chalk.bgBlue(bText)
+    }
+
+    const cText = "c " + allQuestionsShuffled[questionIndex].answers[2].answer
+    let markedKeyC = cText
+
+    if (key === 'c') {
+        markedKeyC = chalk.bgBlue(cText)
+    }
+    const dText = "d " + allQuestionsShuffled[questionIndex].answers[3].answer
+    let markedKeyD = dText
+
+    if (key === 'd') {
+        markedKeyD = chalk.bgBlue(dText)
+    }
+
     // table is an Array, so you can `push`, `unshift`, `splice` and friends
     table.push(
-        ["a " + allQuestionsShuffled[questionIndex].answers[0].answer, "b " + allQuestionsShuffled[questionIndex].answers[1].answer]
-        , ["c " + allQuestionsShuffled[questionIndex].answers[2].answer, "d " + allQuestionsShuffled[questionIndex].answers[3].answer]
+        [markedKeyA, markedKeyB]
+        , [markedKeyC, markedKeyD]
     );
 
     console.log(table.toString());
@@ -169,6 +197,7 @@ let telephoneAnswer = (questionIndex) => {
 
 let checkAnswer = (key) => {
     console.log("a " + key + " választ választottad")
+    askQuestion(getCurrentQuestionCount(), key)
     // kikeresi a nulladik kérdés válaszaiból
     // azt a választ, amelyiknek a betűjele megegyezik a lenyomott billentyűvel
     // const givenAnswer = questionArrEasy[0].answers.find(answer => answer.mark === key)
@@ -181,16 +210,36 @@ let checkAnswer = (key) => {
 
     //helyes válasz?
 
-    if (givenAnswer.correct) {
-        console.log(chalk.bgGreen("helyes"));
+    let yesNo = reader.keyIn("Biztos? ");
+    if (yesNo === 'y') {
+        if (givenAnswer.correct) {
+            console.log(chalk.bgGreen("helyes"));
 
-        if (steps.stepsArr.length > currentQuestionCount + 1) {
-            currentQuestionCount++;
-            askQuestion(currentQuestionCount);
+            if (steps.stepsArr.length > currentQuestionCount + 1) {
+                currentQuestionCount++;
+                askQuestion(currentQuestionCount);
+            }
+        } else {
+            console.log(chalk.bgRed("A válasz helytelen volt, véget ért a játék"));
+            process.exit();
         }
     } else {
-        console.log(chalk.bgRed("A válasz helytelen volt, véget ért a játék"));
-        process.exit();
+        for (let i = 0; i < allQuestionsShuffled[currentQuestionCount].answers.length; i++) {
+            if (allQuestionsShuffled[currentQuestionCount].answers[i].mark === yesNo) {
+                givenAnswer = allQuestionsShuffled[currentQuestionCount].answers[i];
+            }
+        }
+        if (givenAnswer.correct) {
+            console.log(chalk.bgGreen("helyes"));
+
+            if (steps.stepsArr.length > currentQuestionCount + 1) {
+                currentQuestionCount++;
+                askQuestion(currentQuestionCount);
+            }
+        } else {
+            console.log(chalk.bgRed("A válasz helytelen volt, véget ért a játék"));
+            process.exit();
+        }
     }
 }
 
