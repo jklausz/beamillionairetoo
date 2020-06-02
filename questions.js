@@ -48,7 +48,7 @@ let getCurrentQuestionCount = () => {
     return currentQuestionCount;
 }
 
-let askQuestion = (questionIndex = 0, key) => {
+let askQuestion = (questionIndex = 0, key, correct = null) => {
     console.clear();
     steps.getElement(questionIndex);
 
@@ -88,6 +88,21 @@ let askQuestion = (questionIndex = 0, key) => {
 
     if (key === 'd') {
         markedKeyD = chalk.bgBlue(dText)
+    }
+
+    if (correct) {
+        if (correct === 'a') {
+            markedKeyA = chalk.bgGreen(markedKeyA)
+        }
+        if (correct === 'b') {
+            markedKeyB = chalk.bgGreen(markedKeyB)
+        }
+        if (correct === 'c') {
+            markedKeyC = chalk.bgGreen(markedKeyC)
+        }
+        if (correct === 'd') {
+            markedKeyD = chalk.bgGreen(markedKeyD)
+        }
     }
 
     // table is an Array, so you can `push`, `unshift`, `splice` and friends
@@ -220,6 +235,7 @@ let telephoneAnswer = (questionIndex) => {
 let checkAnswer = (key) => {
     console.log("a " + key + " választ választottad")
     askQuestion(getCurrentQuestionCount(), key)
+    let correctAnswer = null
     // kikeresi a nulladik kérdés válaszaiból
     // azt a választ, amelyiknek a betűjele megegyezik a lenyomott billentyűvel
     // const givenAnswer = questionArrEasy[0].answers.find(answer => answer.mark === key)
@@ -230,10 +246,17 @@ let checkAnswer = (key) => {
         }
     }
 
+
+    for (let i = 0; i < allQuestionsShuffled[currentQuestionCount].answers.length; i++) {
+        if (allQuestionsShuffled[currentQuestionCount].answers[i].correct) {
+            correctAnswer = allQuestionsShuffled[currentQuestionCount].answers[i];
+        }
+    }
     //helyes válasz?
 
     let yesNo = reader.keyIn("Biztos? ");
     if (yesNo === 'y') {
+        askQuestion(getCurrentQuestionCount(), key, correctAnswer.mark)
         if (givenAnswer.correct) {
             console.log(chalk.bgGreen("helyes"));
 
@@ -246,6 +269,7 @@ let checkAnswer = (key) => {
             process.exit();
         }
     } else {
+        askQuestion(getCurrentQuestionCount(), yesNo, correctAnswer.mark)
         for (let i = 0; i < allQuestionsShuffled[currentQuestionCount].answers.length; i++) {
             if (allQuestionsShuffled[currentQuestionCount].answers[i].mark === yesNo) {
                 givenAnswer = allQuestionsShuffled[currentQuestionCount].answers[i];

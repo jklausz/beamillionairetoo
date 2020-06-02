@@ -16,6 +16,7 @@ const steps = require('./steps');
 // console.log(questionArrEasy[randomNumber].correct);
 
 const main = () => {
+    console.log('Legyen Ön is milliomos!')
     const MAX_QUESTION_COUNT = steps.getLength();
     // console.log("Press q to exit, s to start")
 

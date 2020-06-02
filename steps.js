@@ -1,3 +1,6 @@
+
+const Table = require('cli-table');
+const chalk = require('chalk');
 const stepsArr = [
     {
         'levelName': '1. szint - 5000 Ft', 'canStop': false
@@ -18,6 +21,35 @@ const stepsArr = [
     { 'levelName': '15. szint - 40000000 Ft', 'canStop': false }
 
 ];
+let table = new Table({
+
+    colWidths: [40]
+});
+
+// table is an Array, so you can `push`, `unshift`, `splice` and friends
+for (let i = 0; i < 5; i++) {
+    table.push(
+        [chalk.bgBlue(stepsArr[i].levelName)],
+    );
+}
+
+for (let i = 5; i < 10; i++) {
+    table.push(
+        [chalk.bgRed(stepsArr[i].levelName)],
+    );
+}
+
+for (let i = 10; i < 15; i++) {
+    table.push(
+        [chalk.bgGreen(stepsArr[i].levelName)],
+    );
+}
+
+
+
+console.log(table.toString());
+
+
 
 
 let getLength = () => {
