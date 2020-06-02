@@ -43,6 +43,7 @@ const main = () => {
         let i = questions.getCurrentQuestionCount()
         while (i <= MAX_QUESTION_COUNT) {
 
+            console.log('Megnézheted, hogy melyik szintnél tartasz, ha megnyomod az l betűt')
             if (halfUsed === false) {
                 console.log('Használhatod a felezést - nyomd meg az f betűt');
             }
