@@ -148,8 +148,11 @@ let checkAnswer = (key) => {
 
     if (givenAnswer.correct) {
         console.log("helyes");
-        currentQuestionCount++;
-        askQuestion(currentQuestionCount);
+
+        if (steps.stepsArr.length > currentQuestionCount + 1) {
+            currentQuestionCount++;
+            askQuestion(currentQuestionCount);
+        }
     } else {
         console.log("A válasz helytelen volt, véget ért a játék");
         process.exit();

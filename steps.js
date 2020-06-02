@@ -31,5 +31,6 @@ let getElement = (index) => {
 
 module.exports = {
     getLength: getLength,
-    getElement: getElement
+    getElement: getElement,
+    stepsArr: stepsArr
 };
