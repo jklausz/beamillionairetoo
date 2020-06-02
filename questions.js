@@ -109,20 +109,42 @@ let askQuestion = (questionIndex = 0, key) => {
 }
 
 let halfAnswer = (questionIndex) => {
-    //let halfOftheAnswers = [];
+    console.clear();
+    let halfOftheAnswers = [];
 
     let wrongCount = 0;
     const currentQuestion = allQuestionsShuffled[currentQuestionCount]
 
+    console.log(currentQuestion.question);
     for (let i = 0; i < currentQuestion.answers.length; i++) {
         const currentWriteAnswer = currentQuestion.answers[i].mark + ' ' + currentQuestion.answers[i].answer
         if (currentQuestion.answers[i].correct) {
-            console.log(currentWriteAnswer);
+            halfOftheAnswers.push(currentWriteAnswer);
         } else if (wrongCount === 0) {
-            console.log(currentWriteAnswer)
+            halfOftheAnswers.push(currentWriteAnswer);
             wrongCount++
+        } else {
+            halfOftheAnswers.push(" ");
         }
     }
+
+    var table = new Table({
+
+        colWidths: [40, 40]
+    });
+
+    // table is an Array, so you can `push`, `unshift`, `splice` and friends
+    table.push(
+        [halfOftheAnswers[0], halfOftheAnswers[1]],
+
+        [halfOftheAnswers[2], halfOftheAnswers[3]]
+    );
+
+    console.log(table.toString());
+
+
+
+
 }
 
 let audienceAnswer = (questionIndex) => {
