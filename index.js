@@ -1,6 +1,7 @@
 // index
 const Table = require('cli-table');
 const chalk = require('chalk');
+const Font = require('ascii-art-font');
 //importálja a question.js-t és a readline-sync-et:
 const questions = require('./questions');
 const reader = require("readline-sync");
@@ -17,6 +18,7 @@ const steps = require('./steps');
 
 const main = () => {
     console.log(chalk.bgBlue('Legyen Ön is milliomos!'));
+
     const MAX_QUESTION_COUNT = steps.getLength();
     // console.log("Press q to exit, s to start")
 

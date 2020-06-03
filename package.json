@@ -17,6 +17,7 @@
   "author": "klausz",
   "license": "ISC",
   "dependencies": {
+    "ascii-art": "^2.5.0",
     "chalk-console": "^1.1.0",
     "cli-table": "^0.3.1",
     "readline-sync": "^1.4.10"
