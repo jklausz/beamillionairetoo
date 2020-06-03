@@ -1,7 +1,7 @@
 // index
 const Table = require('cli-table');
 const chalk = require('chalk');
-const Font = require('ascii-art-font');
+// const Font = require('ascii-art-font');
 //importálja a question.js-t és a readline-sync-et:
 const questions = require('./questions');
 const reader = require("readline-sync");
