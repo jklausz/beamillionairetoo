@@ -47,13 +47,13 @@ const main = () => {
 
             console.log('Megnézheted, hogy melyik szintnél tartasz, ha megnyomod az l betűt')
             if (!halfUsed) {
-                console.log('Használhatod a felezést - nyomd meg az f betűt');
+                console.log(chalk.bgBlue('Használhatod a felezést - nyomd meg az f betűt'));
             }
             if (!phoneUsed) {
-                console.log('Használhatod a telefont - nyomd meg az t betűt');
+                console.log(chalk.bgMagenta('Használhatod a telefont - nyomd meg az t betűt'));
             }
             if (!audienceAsked) {
-                console.log('Használhatod a közönség segítségét - nyomd meg a k betűt');
+                console.log(chalk.bgGreen('Használhatod a közönség segítségét - nyomd meg a k betűt'));
             }
 
 
