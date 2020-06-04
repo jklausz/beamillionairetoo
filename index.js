@@ -46,13 +46,13 @@ const main = () => {
         while (i <= MAX_QUESTION_COUNT) {
 
             console.log('Megnézheted, hogy melyik szintnél tartasz, ha megnyomod az l betűt')
-            if (halfUsed === false) {
+            if (!halfUsed) {
                 console.log('Használhatod a felezést - nyomd meg az f betűt');
             }
-            if (phoneUsed === false) {
+            if (!phoneUsed) {
                 console.log('Használhatod a telefont - nyomd meg az t betűt');
             }
-            if (audienceAsked === false) {
+            if (!audienceAsked) {
                 console.log('Használhatod a közönség segítségét - nyomd meg a k betűt');
             }
 
@@ -75,7 +75,7 @@ const main = () => {
 
             } else if (key === 'f') {
                 console.log('felezés');
-                if (halfUsed === false) {
+                if (!halfUsed) {
                     questions.halfAnswer(questions.getCurrentQuestionCount());
                     halfUsed = true;
                 } else {
@@ -83,7 +83,7 @@ const main = () => {
                 }
             } else if (key === 't') {
                 console.log('telefon');
-                if (phoneUsed === false) {
+                if (!phoneUsed) {
                     questions.telephoneAnswer(questions.getCurrentQuestionCount());
                     phoneUsed = true;
                 } else {
@@ -92,7 +92,7 @@ const main = () => {
 
             } else if (key === 'k') {
                 console.log('közönség');
-                if (audienceAsked === false) {
+                if (!audienceAsked) {
                     questions.audienceAnswer(questions.getCurrentQuestionCount());
                     audienceAsked = true;
                 } else {
