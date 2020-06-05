@@ -1,0 +1,147 @@
+[
+    {
+        "question": "Milyen színű a hó?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "kek",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "b",
+                "answer": "zold",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "c",
+                "answer": "piros",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "d",
+                "answer": "fehér",
+                "correct": true,
+                "level": "easy"
+            }
+        ]
+    },
+    {
+        "question": "Hány füle van a majomnak?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "2",
+                "correct": true,
+                "level": "easy"
+            },
+            {
+                "mark": "b",
+                "answer": "1",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "c",
+                "answer": "3",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "d",
+                "answer": "4",
+                "correct": false,
+                "level": "easy"
+            }
+        ]
+    },
+    {
+        "question": "1 + 1 = ?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "2",
+                "correct": true,
+                "level": "easy"
+            },
+            {
+                "mark": "b",
+                "answer": "1",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "c",
+                "answer": "3",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "d",
+                "answer": "4",
+                "correct": false,
+                "level": "easy"
+            }
+        ]
+    },
+    {
+        "question": "Mi Magyarország fővárosa?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Bukarest",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "b",
+                "answer": "Szeged",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "c",
+                "answer": "Medgyesegyháza",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "d",
+                "answer": "Budapest",
+                "correct": true,
+                "level": "easy"
+            }
+        ]
+    },
+    {
+        "question": "Hol sütik már a rántott békát?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Kovácséknál",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "b",
+                "answer": "Vargáéknál",
+                "correct": false,
+                "level": "easy"
+            },
+            {
+                "mark": "c",
+                "answer": "Virágéknál",
+                "correct": true,
+                "level": "easy"
+            },
+            {
+                "mark": "d",
+                "answer": "Smithéknél",
+                "correct": false,
+                "level": "easy"
+            }
+        ]
+    }
+]

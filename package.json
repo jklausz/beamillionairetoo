@@ -1,0 +1,25 @@
+{
+  "name": "jklausz",
+  "version": "1.0.0",
+  "description": "be a millionnaire too",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "beamillionairetoo"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "klausz",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-art": "^2.5.0",
+    "chalk-console": "^1.1.0",
+    "cli-table": "^0.3.1",
+    "readline-sync": "^1.4.10"
+  }
+}

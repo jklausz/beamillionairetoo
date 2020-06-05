@@ -1,0 +1,43 @@
+[
+    {
+        "question": "Milyen színű a hó?",
+        "answers": [
+            {
+                "answer": "kek",
+                "correct": false
+            },
+            {
+                "answer": "zold",
+                "correct": false
+            },
+            {
+                "answer": "piros",
+                "correct": false
+            },
+            {
+                "answer": "fehér",
+                "correct": true
+            }
+        ]
+    },
+    {
+        "question": "Hány lába van a kutyának?",
+        "answers": [
+            "1",
+            "5",
+            "18",
+            "4"
+        ],
+        "correct": "4"
+    },
+    {
+        "question": "Mi Magyarország fővárosa?",
+        "answers": [
+            "Bukarest",
+            "Szeged",
+            "Róma",
+            "Budapest"
+        ],
+        "correct": "Budapest"
+    }
+]

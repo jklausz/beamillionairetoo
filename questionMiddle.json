@@ -1,0 +1,147 @@
+[
+    {
+        "question": "Mi indul Rideg Sándor regényének címében?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "a banzáj",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "a bakterház",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "a mandula",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "a verseny",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Mit neveztek a régi magyarok Hadak útjának?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "a honfoglalás útvonalát",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "a Tejutat",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "a Bécs felé vezető főutat",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "a nászutat",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Az alábbiak közül melyiket nevezik bricskának?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "vitorlás hajót",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "lovas kocsit",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "zsebkést",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "térdnadrágot",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Milyen állat a Fekete István történetéből ismert Lutra?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "hód",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "vidra",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "cickány",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "tengerimalac",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    },
+    {
+        "question": "Hol volt Minótaurosz híres labirintusa?",
+        "answers": [
+            {
+                "mark": "a",
+                "answer": "Máltán",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "b",
+                "answer": "Cipruson",
+                "correct": false,
+                "level": "middle"
+            },
+            {
+                "mark": "c",
+                "answer": "Krétán",
+                "correct": true,
+                "level": "middle"
+            },
+            {
+                "mark": "d",
+                "answer": "Korzikán",
+                "correct": false,
+                "level": "middle"
+            }
+        ]
+    }
+]
