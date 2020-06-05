@@ -105,41 +105,6 @@ let askQuestion = (questionIndex = 0, key, correct = null) => {
         markedKeyD = chalk.bgBlue(dText)
     }
 
-
-    /*
-        if (correct === 'a') {
-            console.clear();
-            markedKeyA = chalk.bgGreen(markedKeyA)
-        } else if (key === 'a') {
-            console.clear();
-            markedKeyA = chalk.bgBlue(aText)
-        }
-    
-    
-        if (correct === 'b') {
-            console.clear();
-            markedKeyB = chalk.bgGreen(markedKeyB)
-        } else if (key === 'b') {
-            console.clear();
-            markedKeyB = chalk.bgBlue(bText)
-        }
-        if (correct === 'c') {
-            console.clear();
-            markedKeyC = chalk.bgGreen(markedKeyC)
-        } else if (key === 'c') {
-            console.clear();
-            markedKeyC = chalk.bgBlue(cText)
-        }
-    
-        if (correct === 'd') {
-            console.clear();
-            markedKeyD = chalk.bgGreen(markedKeyD)
-        } else if (key === 'd') {
-            console.clear();
-            markedKeyD = chalk.bgBlue(dText)
-        } */
-
-
     // table is an Array, so you can `push`, `unshift`, `splice` and friends
     table.push(
         [markedKeyA, markedKeyB]
